@@ -2,7 +2,9 @@
 
 > **Status:** Work in Progress
 
-A two-stage deep learning system that analyzes emotional content in music and generates corresponding emotional landscape images using diffusion models.## Overview
+A two-stage deep learning system that analyzes emotional content in music and generates corresponding emotional landscape images using diffusion models.
+
+## Overview
 
 This project implements an end-to-end pipeline that:
 1. Analyzes music to extract emotional features (Valence and Arousal values)
