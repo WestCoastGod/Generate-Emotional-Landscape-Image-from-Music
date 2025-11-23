@@ -2,7 +2,6 @@
 
 > **Status:** Work in Progress
 
-asdadasdasd
 A two-stage deep learning system that analyzes emotional content in music and generates corresponding emotional landscape images using diffusion models.
 
 ## Overview
@@ -185,43 +184,43 @@ Generate-Emotional-Landscape-Image-from-Music/
 │
 ├── Data/                            # All datasets
 │   ├── Image/
-│   │   ├── All_photos/             # Full image dataset
-│   │   ├── Landscape/              # Landscape subset
-│   │   ├── FindingEmo/             # FindingEmo dataset
-│   │   ├── EmotionLabel/           # CGnA10766 VA annotations (CSV)
+│   │   ├── All_photos/              # Full image dataset
+│   │   ├── Landscape/               # Landscape subset
+│   │   ├── FindingEmo/              # FindingEmo dataset
+│   │   ├── EmotionLabel/            # CGnA10766 VA annotations 
 │   │   ├── analyze_dataset.py
 │   │   └── dataset_*.png
 │   └── Music/
-│       ├── DEAM/                    # DEAM dataset
-│       ├── PMEmo/                   # PMEmo dataset
+│       ├── DEAM/                     # DEAM dataset
+│       ├── PMEmo/                    # PMEmo dataset
 │       └── EmotionLabel/
 │           └── music_train_dataset.csv
 │
-├── Music_Emotion_Analysis/          # Music VA prediction
+├── Music_Emotion_Analysis/           # Music VA prediction
 │   ├── music_data_clean_and_train.ipynb
 │   ├── feature_importance.svg
 │   └── predicted_vs_true_values.svg
 │
-├── Image_Generation/                # Image generation models
-│   ├── GAN/                         # Legacy GAN experiments (not recommended)
+├── Image_Generation/                 # Image generation models
+│   ├── GAN/                          # Legacy GAN experiments (not recommended)
 │   │   ├── Models/
 │   │   ├── Utils/
 │   │   └── train_*.py
-│   └── Diffusion/                   # Working diffusion model
+│   └── Diffusion/                    # Working diffusion model
 │       ├── Utils/
-│       │   └── dataloader.py        # Emotion dataset loader
-│       ├── train_diffusion.py       # Local training (batch 16) - BEST
-│       ├── train_diffusion_48gb.py  # Cloud training (batch 128)
-│       └── generate.py              # Image generation script
+│       │   └── dataloader.py         # Emotion dataset loader
+│       ├── train_diffusion.py        # Local training (batch 16) - BEST
+│       ├── train_diffusion_48gb.py   # Cloud training (batch 128)
+│       └── generate.py               # Image generation script
 │
-├── Weights/                         # Trained model checkpoints
+├── Weights/                          # Trained model checkpoints
 │   ├── Diffusion/
-│   │   └── diffusion_epoch1650.pth # RECOMMENDED MODEL
+│   │   └── diffusion_epoch1650.pth   # RECOMMENDED MODEL
 │   ├── Music/
 │   │   └── music_model_optimized.joblib
 │   └── Backup/
 │
-└── Demo/                            # Sample outputs and documentation
+└── Demo/                             # Sample outputs and documentation
     ├── GAN_Samples/
     ├── Diffusion_Samples/
     └── Others/
@@ -286,9 +285,3 @@ python train_diffusion.py
 - **CGnA10766 Annotations:** Valence-Arousal labels for FindingEmo images
 - **DEAM Dataset:** Database for emotional analysis of music (2058 songs)
 - **PMEmo Dataset:** Popular music emotion dataset (794 tracks)
-
-## Acknowledgments
-
-- FindingEmo and CGnA10766 dataset creators
-- DEAM and PMEmo dataset contributors
-- PyTorch and related open-source communities
